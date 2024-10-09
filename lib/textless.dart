@@ -18,6 +18,7 @@ class ThemedText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Theme.of(context).textTheme.headlineLarge;
     return Text(data,
         style: style!(Theme.of(context).textTheme),
         overflow: extra?["overflow"],
@@ -115,17 +116,17 @@ extension TextLess on String {
   ThemedText style(TextStyle style) =>
       ThemedText(data: this, style: (t) => style);
   ThemedText get text => ThemedText(data: this, style: (t) => TextStyle());
-  ThemedText get h1 => ThemedText(data: this, style: (t) => t.headline1!);
-  ThemedText get h2 => ThemedText(data: this, style: (t) => t.headline2!);
-  ThemedText get h3 => ThemedText(data: this, style: (t) => t.headline3!);
-  ThemedText get h4 => ThemedText(data: this, style: (t) => t.headline4!);
-  ThemedText get h5 => ThemedText(data: this, style: (t) => t.headline5!);
-  ThemedText get h6 => ThemedText(data: this, style: (t) => t.headline6!);
-  ThemedText get s1 => ThemedText(data: this, style: (t) => t.subtitle1!);
-  ThemedText get s2 => ThemedText(data: this, style: (t) => t.subtitle2!);
-  ThemedText get b1 => ThemedText(data: this, style: (t) => t.bodyText1!);
-  ThemedText get b2 => ThemedText(data: this, style: (t) => t.bodyText2!);
-  ThemedText get btn => ThemedText(data: this, style: (t) => t.button!);
-  ThemedText get cap => ThemedText(data: this, style: (t) => t.caption!);
-  ThemedText get ol => ThemedText(data: this, style: (t) => t.overline!);
+  ThemedText get h1 => ThemedText(data: this, style: (t) => t.displayLarge!);
+  ThemedText get h2 => ThemedText(data: this, style: (t) => t.displayMedium!);
+  ThemedText get h3 => ThemedText(data: this, style: (t) => t.displaySmall!);
+  ThemedText get h4 => ThemedText(data: this, style: (t) => t.headlineMedium!);
+  ThemedText get h5 => ThemedText(data: this, style: (t) => t.headlineSmall!);
+  ThemedText get h6 => ThemedText(data: this, style: (t) => t.titleLarge!);
+  ThemedText get s1 => ThemedText(data: this, style: (t) => t.titleMedium!);
+  ThemedText get s2 => ThemedText(data: this, style: (t) => t.titleSmall!);
+  ThemedText get b1 => ThemedText(data: this, style: (t) => t.bodyLarge!);
+  ThemedText get b2 => ThemedText(data: this, style: (t) => t.bodyMedium!);
+  ThemedText get btn => ThemedText(data: this, style: (t) => t.bodySmall!);
+  ThemedText get cap => ThemedText(data: this, style: (t) => t.labelLarge!);
+  ThemedText get ol => ThemedText(data: this, style: (t) => t.labelSmall!);
 }
